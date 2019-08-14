@@ -7,7 +7,8 @@ RSpec.describe 'Home', type: :system do
     expect(page).to have_content 'Hello React!'
   end
 
-  it 'visit bye root', js: true do
+  # pending にしてわざとカバレッジ100%にならないようにしている
+  xit 'visit bye root', js: true do
     visit root_path(greeting: 'bye')
     expect(page).to have_content 'Hello, MyApp'
     expect(page).to have_content 'Bye React!'

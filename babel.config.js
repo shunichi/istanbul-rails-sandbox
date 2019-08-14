@@ -79,7 +79,8 @@ module.exports = function(api) {
         {
           removeImport: true
         }
-      ]
+      ],
+      process.env.RAILS_ENV == 'test' && require('babel-plugin-istanbul'),
     ].filter(Boolean)
   }
 }
